@@ -154,7 +154,10 @@ if( $page['act'] == 'view' ) { ?>
 
 				<!-- Latest compiled and minified CSS -->
 				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+				<!-- Optional theme -->
+				<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
+				<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZki_diA0TUgFKWcxcrPijDOYTg0k27Ak"></script>
 
     </head>
     <body>
@@ -162,15 +165,9 @@ if( $page['act'] == 'view' ) { ?>
 				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 			<![endif]-->
 
+
 			<!-- Top nav -->
-			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-				<div class="container">
-					<div class="navbar-header">
-						<h1>Magic Doors</h1>
-						<a href='?act=list'>List all </a>
-					</div>
-				</div>
-			</nav>
+			<php include 'tp_main.php' ; ?>
 
 			<!-- Add your site or application content here -->
 			<div class="container">
@@ -189,7 +186,7 @@ if( $page['act'] == 'view' ) { ?>
 
 
 		<footer>
-			Last updated June 29, 2015. Made possiable with a grant from XXXX ToDo: 
+			Last updated June 29, 2015. Made possiable with a grant from XXXX ToDo:
 		</footer>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
