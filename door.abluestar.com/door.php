@@ -14,9 +14,14 @@ if( $page['act'] == 'view' ) {
 	$page['data']['slug'] = "error";
 	if( isset( $_REQUEST['slug'] ) ) {
 		$page['data']['slug'] =  $_REQUEST['slug'] ;
+		// ToDo: Look up the door in the database.
+
+		// Title
+		$page['title'] = $page['data']['slug'] ;
+	} else {
+		// We could not find this door.
+		$page['act'] = '404' ;
 	}
-	// Title
-	$page['title'] = $page['data']['slug'] ;
 }
 
 // Generate template name
