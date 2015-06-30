@@ -5,7 +5,7 @@ $page['act'] = 'about' ;
 // Check to see if there was a act set.
 if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
-	if( in_array( $_REQUEST['act'], array('about', 'map', 'contact', 'view') ) ) {
+	if( in_array( $_REQUEST['act'], array('about', 'map', 'view') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
 	}
 }
@@ -31,6 +31,7 @@ $page['template'] = 'tp_' . $page['act'] . '.php' ;
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link href="style.css" rel="stylesheet">
   </head>
 	<body>

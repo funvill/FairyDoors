@@ -13,7 +13,6 @@
       <ul class="nav navbar-nav">
         <li <?php if( $page['act'] == 'about'   ) { echo 'class="active"' ; } ?> ><a href="?act=about">About</a></li>
         <li <?php if( $page['act'] == 'map'     ) { echo 'class="active"' ; } ?> ><a href="?act=map">Map</a></li>
-        <li <?php if( $page['act'] == 'contact' ) { echo 'class="active"' ; } ?> ><a href="?act=contact">Contact</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
