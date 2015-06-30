@@ -4,10 +4,23 @@
 </div>
 
 
-
-
+<style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+    </style>
+<div id='map-canvas'></div>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZki_diA0TUgFKWcxcrPijDOYTg0k27Ak"></script>
 <script type="text/javascript">
+
+  var doors = [
+    // Name,                    Lat,      Log,          id
+    ['VHS',                     49.269083,-123.1080287, 1],
+    ['Dude chilling park',      49.263791,-123.0956369, 2],
+  ];
+
   function initialize() {
     var mapCenter = new google.maps.LatLng(49.2638164,-123.0911522);
     var mapOptions = {
@@ -17,12 +30,9 @@
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     setMarkers(map, doors);
-  };
 
-  var doors = [
-    ['VHS', 49.269083,-123.1080287],
-    ['Dude chilling park', 49.2637911,-123.0956369],
-  ];
+
+  };
 
   function setMarkers(map, locations) {
     // Add markers to the map
@@ -34,9 +44,20 @@
           map: map,
           title: door[0]
       });
+
+      var content     = '<strong>' + door[0] + "</strong><hr/><a href='/door.php?act=view&id=" + String( door[3] ) + "'>More info</a>" ;
+      var infowindow  = new google.maps.InfoWindow() ;
+
+      google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+        return function() {
+            infowindow.setContent(content);
+            infowindow.open(map,marker);
+        };
+      })(marker,content,infowindow));
     }
   }
 
+
+
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<div class='map-canvas'></div>

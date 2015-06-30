@@ -1,3 +1,7 @@
+<?php
+$page['act'] = 'main' ;
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -23,11 +27,12 @@
 
 
 			<!-- Top nav -->
-			<php include 'tp_main.php' ; ?>
+			<?php include 'tp_nav.php' ; ?>
 
 			<!-- Add your site or application content here -->
 			<div class="container">
 			<?php
+
 				switch( $page['act'] ) {
 					default:
 					case 'main':
