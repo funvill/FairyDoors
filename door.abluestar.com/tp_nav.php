@@ -7,13 +7,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Magic Doors</a>
+      <a class="navbar-brand" href="?act=about">Magic Doors</a>
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="?act=about">About</a></li>
-        <li><a href="?act=map">Map</a></li>
-        <li><a href="?act=contact">Contact</a></li>
+        <li <?php if( $page['act'] == 'about'   ) { echo 'class="active"' ; } ?> ><a href="?act=about">About</a></li>
+        <li <?php if( $page['act'] == 'map'     ) { echo 'class="active"' ; } ?> ><a href="?act=map">Map</a></li>
+        <li <?php if( $page['act'] == 'contact' ) { echo 'class="active"' ; } ?> ><a href="?act=contact">Contact</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>

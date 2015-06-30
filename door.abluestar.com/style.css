@@ -4,4 +4,8 @@ html, body, #map-canvas {
   padding: 0px
 }
 
+.content {
+  margin: 0 10%; 
+}
+
 footer {text-align: center; }

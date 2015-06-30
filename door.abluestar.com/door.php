@@ -1,9 +1,16 @@
 <?php
 
+// SEt default for act
 $page['act'] = 'about' ;
-if( isset( $_REQUEST['act'] )) {
-  $page['act'] = $_REQUEST['act'] ;
+// Check to see if there was a act set.
+if( isset($_REQUEST['act'] ) ) {
+	// Check to make sure that its a valid act, else use default
+	if( in_array( $_REQUEST['act'], array('about', 'map', 'contact', 'view') ) ) {
+		$page['act'] = $_REQUEST['act'] ;
+	}
 }
+
+
 
 ?>
 <!doctype html>
@@ -14,7 +21,7 @@ if( isset( $_REQUEST['act'] )) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Magic Door</title>
-    <meta name="description" content="">
+    <meta name="description" content="A map of magic doors around the world.">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -30,21 +37,11 @@ if( isset( $_REQUEST['act'] )) {
 			<!-- Top nav -->
 			<?php include 'tp_nav.php' ; ?>
 
-			<!-- Add your site or application content here -->
+			<!-- content -->
 			<?php
-				switch( $page['act'] ) {
-					default:
-					case 'main':
-						include 'tp_about.php' ;
-						break;
-          case 'view':
-						include 'tp_view.php' ;
-						break;
-          case 'map':
-						include 'tp_map.php' ;
-						break;
-				}
-			?>
+        // This is guaranteed to be an expected value. Checked in header of file.
+        include 'tp_' + $page['act'] + '.php' ;
+      ?>
 
     <!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
