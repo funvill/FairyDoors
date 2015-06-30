@@ -16,34 +16,27 @@
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-    setMarkers(map, beaches);
-  });
+    setMarkers(map, doors);
+  };
 
-  /**
-   * Data for the markers consisting of a name, a LatLng and a zIndex for
-   * the order in which these markers should display on top of each
-   * other.
-   */
-  var beaches = [
+  var doors = [
     ['VHS', 49.269083,-123.1080287],
     ['Dude chilling park', 49.2637911,-123.0956369],
   ];
 
   function setMarkers(map, locations) {
-  // Add markers to the map
-
-  for (var i = 0; i < locations.length; i++) {
-    var doors = locations[i];
-    var doorLatLng = new google.maps.LatLng(doors[1], doors[2]);
-    var marker = new google.maps.Marker({
-        position: doorLatLng,
-        map: map,
-        title: doors[0]
-    });
+    // Add markers to the map
+    for (var i = 0; i < locations.length; i++) {
+      var door = locations[i];
+      var doorLatLng = new google.maps.LatLng(door[1], door[2]);
+      var marker = new google.maps.Marker({
+          position: doorLatLng,
+          map: map,
+          title: door[0]
+      });
+    }
   }
-}
 
-  }
   google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <div class='map-canvas'></div>
