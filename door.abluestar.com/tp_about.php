@@ -17,9 +17,9 @@
     <div class='col-md-12' >
       <h3>Sponsors</h3>
       <p>This project was sponsored by the following organizations<p>
-      <a href='https://vancouver.hackspace.ca/wp/'><img src='img/vhslogo.png' alt='The Vancouver Hackspace' /></a>
-      <a href='http://www.mpnh.org/'><img src='img/mpnh.png' alt='Mount Pleasant Neighbourhood House' /></a>
-      <a href='https://www.vancouverfoundation.ca/'><img src='img/vancouverFoundation.png' alt='The Vancouver Foundation' /></a>
+      <a href='https://vancouver.hackspace.ca/wp/'><img src='img/vhslogo.PNG' alt='The Vancouver Hackspace' /></a>
+      <a href='http://www.mpnh.org/'><img src='img/mpnh.PNG' alt='Mount Pleasant Neighbourhood House' /></a>
+      <a href='https://www.vancouverfoundation.ca/'><img src='img/vancouverFoundation.PNG' alt='The Vancouver Foundation' /></a>
     </div>
   </div>
 
