@@ -10,6 +10,10 @@ if( isset($_REQUEST['act'] ) ) {
 	}
 }
 
+// Generate template name
+// This is guaranteed to be an expected value. Checked in header of file.
+$page['template'] = 'tp_' . $page['act'] . '.php' ;
+// ToDo ensure that this template exists.
 
 
 ?>
@@ -29,19 +33,16 @@ if( isset($_REQUEST['act'] ) ) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link href="style.css" rel="stylesheet">
   </head>
-    <body>
-			<!--[if lt IE 8]>
-				<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-			<![endif]-->
+	<body>
+		<!--[if lt IE 8]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
 
-			<!-- Top nav -->
-			<?php include 'tp_nav.php' ; ?>
+		<!-- Top nav -->
+		<?php include 'tp_nav.php' ; ?>
 
-			<!-- content -->
-			<?php
-        // This is guaranteed to be an expected value. Checked in header of file.
-        include 'tp_' + $page['act'] + '.php' ;
-      ?>
+		<!-- content -->
+		<?php include $page['template'] ; ?>
 
     <!-- Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
