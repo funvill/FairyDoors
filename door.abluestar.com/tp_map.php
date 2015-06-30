@@ -32,7 +32,7 @@
           title: door[0]
       });
 
-      var content     = '<strong>' + door[0] + "</strong><hr/><a href='/door.php?act=view&id=" + String( door[3] ) + "'>More info</a>" ;
+      var content     = '<strong>' + door[0] + "</strong><hr/><a href='door.php?act=view&id=" + String( door[3] ) + "'>More info</a>" ;
       var infowindow  = new google.maps.InfoWindow() ;
 
       google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
