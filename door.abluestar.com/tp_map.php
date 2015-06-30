@@ -1,10 +1,11 @@
-<style> html, body, #map-canvas {
+<?php include 'settings.php' ; ?>
+<style>html, body, #map-canvas {
   height: 100%;
   margin: 0px;
   padding: 0px
 } </style>
 <div id='map-canvas'></div>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZki_diA0TUgFKWcxcrPijDOYTg0k27Ak"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_MAP_API ; ?>"></script>
 <script type="text/javascript">
 
   var doors = [

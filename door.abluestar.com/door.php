@@ -10,10 +10,19 @@ if( isset($_REQUEST['act'] ) ) {
 	}
 }
 
+if( $page['act'] == 'view' ) {
+	$page['data']['slug'] = "error";
+	if( isset( $_REQUEST['slug'] ) ) {
+		$page['data']['slug'] =  $_REQUEST['slug'] ;
+	}
+	// Title
+	$page['title'] = $page['data']['slug'] ;
+}
+
 // Generate template name
 // This is guaranteed to be an expected value. Checked in header of file.
 $page['template'] = 'tp_' . $page['act'] . '.php' ;
-// ToDo ensure that this template exists.
+
 
 
 ?>
@@ -24,7 +33,7 @@ $page['template'] = 'tp_' . $page['act'] . '.php' ;
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Magic Door</title>
+    <title><?php if( isset( $page['title'] ) ) { echo $page['title'] . ' -' ; } ?> Magic Door</title>
     <meta name="description" content="A map of magic doors around the world.">
 
     <!-- Latest compiled and minified CSS -->
