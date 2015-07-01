@@ -1,10 +1,16 @@
 <?php require_once('settings.php') ; ?>
-<div style='margin-bottom: 80px;' ></div>
-<div class='page'>
-  <div class="container">
+<div class='page container'>
+  <div class="row">
     <div class='col-md-12'>
       <h1><?php echo $page['data']['name'] ; ?></h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class='col-md-8'>
       <p><?php echo $page['data']['body'] ; ?></p>
+    </div>
+    <div class='col-md-4'>
+      <div id='map-canvas'></div>
     </div>
   </div>
 
@@ -26,3 +32,40 @@
     }());
   </script>
 </div>
+
+
+
+
+
+
+<style>
+#map-canvas {
+  height: 400px;
+  width: 100%;
+} </style>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_MAP_API ; ?>"></script>
+<script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      zoom: 15
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var marker ;
+    placeMarker( new google.maps.LatLng( <?php echo $page['data']['lon'] ; ?>, <?php echo $page['data']['lng'] ; ?>) );
+
+
+    function placeMarker(location) {
+      if (marker == undefined){
+          marker = new google.maps.Marker({
+              position: location,
+              map: map,
+              animation: google.maps.Animation.DROP
+          });
+      } else {
+          marker.setPosition(location);
+      }
+      map.setCenter(location);
+    }
+  };
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
