@@ -39,7 +39,7 @@ require_once('settings.php') ;
     </div>
 
     <div class='col-md-6'>
-      <h3>Door location</h3>
+      <h3>Location of the door</h3>
       <p>Click the map to add a marker for the doors location. Click the map again to move the maker</p>
       <div id='map-canvas'></div>
     </div>
@@ -60,7 +60,7 @@ require_once('settings.php') ;
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
     map.setOptions({draggableCursor:'crosshair'});
-    
+
     // Try HTML5 geolocation
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
