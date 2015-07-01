@@ -15,7 +15,7 @@
   ];
 
   function initialize() {
-    var mapCenter = new google.maps.LatLng(49.2638164,-123.0911522);
+    var mapCenter = new google.maps.LatLng(<?php echo GOOGLE_MAP_DEFAULT_LOCATION_LATITUDE ;?> ,<?php echo GOOGLE_MAP_DEFAULT_LOCATION_LONGITUDE ; ?>);
     var mapOptions = {
       center: mapCenter,
       zoom: 15

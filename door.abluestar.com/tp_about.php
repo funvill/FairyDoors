@@ -1,19 +1,19 @@
-<div class='page'>
-  <div class="container">
+<div class='page container'>
+  <div class="row">
     <div class='col-md-12'>
       <h1>Magic doors</h1>
       <p>As we all know, little doors are portals to magical places. They can lean one to <a href='https://en.wikipedia.org/wiki/Gnome'>gnomes</a>, <a href='https://en.wikipedia.org/wiki/Fairy'>fairies</a>, and many other types of <a href='https://en.wikipedia.org/wiki/Magical_creature'>magical creatures</a>!</p>
     </div>
   </div>
 
-  <div class="container">
+  <div class="row">
     <div class='col-md-12'>
       ToDo: More info and example doors.
     </div>
   </div>
 
 
-  <div class="container">
+  <div class="row">
     <div class='col-md-12' >
       <h3>Sponsors</h3>
       <p>This project was sponsored by the following organizations<p>
@@ -23,10 +23,10 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="row">
     <div class='col-md-6' >
       <h3>About Steven Smethurst</h3>
-      <p><img src='#' width='200px' height='200px' align='left' style='margin: 0 20px 20px 0' /> Steven Smethurst is a <a href='https://www.google.ca/maps/place/Vancouver,+BC/@49.2569332,-123.1239135,12z/data=!4m2!3m1!1s0x548673f143a94fb3:0xbb9196ea9b81f38b'>Vancouver based Maker</a>, Hacker, Coder, and all around great guy! <br />He created this project to bring a little more magic and happiness into this world. </p>
+      <p><img src='img/steven_smethurst.jpeg' width='200px' height='134px' align='left' style='margin: 0 20px 20px 0' /> Steven Smethurst is a <a href='https://www.google.ca/maps/place/Vancouver,+BC/@49.2569332,-123.1239135,12z/data=!4m2!3m1!1s0x548673f143a94fb3:0xbb9196ea9b81f38b'>Vancouver based Maker</a>, Hacker, Coder, and all around great guy! <br />He created this project to bring a little more magic and happiness into this world. </p>
 
       <p>You can find more of his projects at his blog <a href='http://blog.abluestar.com/'>abluestar.com</a></p>
     </div>
