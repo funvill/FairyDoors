@@ -3,20 +3,21 @@
   <div class="row">
     <div class='col-md-12'>
       <h1><?php echo $page['data']['name'] ; ?></h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class='col-md-8'>
       <p><?php echo $page['data']['body'] ; ?></p>
-    </div>
-    <div class='col-md-4'>
-      <div id='map-canvas'></div>
     </div>
   </div>
 
   <div class="container">
-    <!-- disqus thread.-->
-    <div id="disqus_thread"></div>
+    <div class="row">
+      <div class='col-md-4'>
+        <!-- map -- >
+        <div id='map-canvas'></div>
+      </div>
+      <div class='col-md-8'>
+      <!-- disqus thread.-->
+      <div id="disqus_thread"></div>
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript">
