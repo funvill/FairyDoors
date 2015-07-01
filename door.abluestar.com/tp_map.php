@@ -1,10 +1,13 @@
 <?php include 'settings.php' ; ?>
-<style>html, body, #map-canvas {
+<style>html, body, .page, #map-canvas {
   height: 100%;
-  margin: 0px;
-  padding: 0px
 } </style>
-<div id='map-canvas'></div>
+
+<div class='page'>
+  <div id='map-canvas'></div>
+</div>
+
+
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=<?php echo GOOGLE_MAP_API ; ?>"></script>
 <script type="text/javascript">
 
