@@ -26,7 +26,7 @@
     var mapCenter = new google.maps.LatLng(<?php echo GOOGLE_MAP_DEFAULT_LOCATION_LATITUDE ;?> ,<?php echo GOOGLE_MAP_DEFAULT_LOCATION_LONGITUDE ; ?>);
     var mapOptions = {
       center: mapCenter,
-      zoom: 15
+      zoom: 14
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
