@@ -1,23 +1,68 @@
 <?php
+// Connect to the MyThings database.
+require_once('class.MyDoors.php');
+$db = new MyDoors();
+
+
 
 // SEt default for act
 $page['act'] = 'about' ;
 // Check to see if there was a act set.
 if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
-	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add') ) ) {
+	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
 	}
 }
+
+if( $page['act'] == 'add' &&
+    isset( $_REQUEST['name'] ) && isset( $_REQUEST['description'] ) &&
+    isset( $_REQUEST['longitude'] ) && isset( $_REQUEST['latitude'] ) )
+{
+    // Generate a slug
+    // From http://cubiq.org/the-perfect-php-clean-url-generator
+    setlocale(LC_ALL, 'en_US.UTF8');
+    function toAscii($str, $replace=array(), $delimiter='-') {
+    	if( !empty($replace) ) {
+    		$str = str_replace((array)$replace, ' ', $str);
+    	}
+    	$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
+    	$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
+    	$clean = strtolower(trim($clean, '-'));
+    	$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
+      $clean = strtolower(trim($clean, '-'));
+    	return $clean;
+    }
+		$slug = toAscii( $_REQUEST['name'] ) ;
+
+		// Remove any scripting from the description or name.
+		$name = strip_tags( $_REQUEST['name'] ) ;
+		$description = strip_tags( $_REQUEST['description'] ) ;
+		$latitude = strip_tags( $_REQUEST['latitude'] ) ;
+		$longitude = strip_tags( $_REQUEST['longitude'] ) ;
+
+    // Add this door.
+    $db->Update( $slug, $name, $description, $latitude , $longitude ) ;
+
+		// ToDo: redirect to the door page.
+    echo '<div class="page container"><p class="bg-success">Magic door added</p></div><br />';
+		echo '<a href="?act=view&slug='. $slug .'">'. $name .'</a>' ;
+		exit();
+}
+
 
 if( $page['act'] == 'view' ) {
 	$page['data']['slug'] = "error";
 	if( isset( $_REQUEST['slug'] ) ) {
 		$page['data']['slug'] =  $_REQUEST['slug'] ;
-		// ToDo: Look up the door in the database.
-
-		// Title
-		$page['title'] = $page['data']['slug'] ;
+		$page['data'] = $db->GetBySlug( $page['data']['slug'] ) ;
+		if( $page['data'] === false ) {
+			// We could not find this door.
+			$page['act'] = '404' ;
+		} else {
+			// Title
+			$page['title'] = $page['data']['name'] ;
+		}
 	} else {
 		// We could not find this door.
 		$page['act'] = '404' ;
@@ -27,7 +72,11 @@ if( $page['act'] == 'view' ) {
 // Generate template name
 // This is guaranteed to be an expected value. Checked in header of file.
 $page['template'] = 'tp_' . $page['act'] . '.php' ;
-
+if( ! file_exists($page['template']) ) {
+	// The file can not be found.
+	$page['act'] = '404' ;
+	$page['template'] = 'tp_' . $page['act'] . '.php' ;
+}
 
 
 ?>

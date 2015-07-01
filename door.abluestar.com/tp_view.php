@@ -1,10 +1,10 @@
-<?php include 'settings.php' ; ?>
+<?php require_once('settings.php') ; ?>
 <div style='margin-bottom: 80px;' ></div>
 <div class='page'>
   <div class="container">
     <div class='col-md-12'>
-      Info about the door.
-      slug=<?php echo $page['data']['slug'] ; ?>
+      <h1><?php echo $page['data']['name'] ; ?></h1>
+      <p><?php echo $page['data']['body'] ; ?></p>
     </div>
   </div>
 

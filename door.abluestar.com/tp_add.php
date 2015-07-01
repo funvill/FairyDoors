@@ -1,12 +1,14 @@
-<?php include 'settings.php' ; ?>
+<?php
+require_once('settings.php') ;
+?>
 <div class='page container'>
   <div class="row">
     <div class='col-md-6'>
       <h3>Add a new Magic door</h3>
       <p>You can add a new door here. blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab </p>
 
-      <form action="?act=add" method="post" >
-
+      <form action="?" method="post" >
+        <input type='hidden' name='act' value='add' />
         <div class="form-group">
           <label for="name">Name of the door</label>
           <input type='text' class="form-control" name='name' data-minlength="6" required />

@@ -1,4 +1,4 @@
-<?php include 'settings.php' ; ?>
+<?php require_once('settings.php') ; ?>
 <style>html, body, .page, #map-canvas {
   height: 100%;
 } </style>
@@ -12,9 +12,14 @@
 <script type="text/javascript">
 
   var doors = [
-    // Name,                    Lat,      Log,          id
-    ['VHS',                     49.269083,-123.1080287, 1],
-    ['Dude chilling park',      49.263791,-123.0956369, 2],
+    //   Name,                     Lat,      Log,          slug
+    // ['VHS',                     49.269083,-123.1080287, vhs],
+    <?
+    $page['data'] = $db->GetAll( ) ;
+    foreach( $page['data'] as $door ) {
+    	echo '["'.$door['name'].'", '. $door['lon'] .','. $door['lng'] .',"'. $door['slug'] ."\"],\n";
+    }
+    ?>
   ];
 
   function initialize() {
@@ -26,8 +31,6 @@
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
     setMarkers(map, doors);
-
-
   };
 
   function setMarkers(map, locations) {
@@ -41,7 +44,7 @@
           title: door[0]
       });
 
-      var content     = '<strong>' + door[0] + "</strong><hr/><a href='door.php?act=view&id=" + String( door[3] ) + "'>More info</a>" ;
+      var content     = "<a href='door.php?act=view&slug=" + door[3] + "'><strong>" + door[0] + "</strong></a>" ;
       var infowindow  = new google.maps.InfoWindow() ;
 
       google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
