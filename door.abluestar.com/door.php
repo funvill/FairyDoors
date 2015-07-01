@@ -13,7 +13,7 @@ if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
 	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
-		$page['title'] = $page['act'] ;
+		$page['title'] = ucfirst( $page['act'] ) ; // First letter should be uppercase 
 	}
 }
 
@@ -63,7 +63,7 @@ if( $page['act'] == 'view' ) {
 			$page['act'] = '404' ;
 		} else {
 			// Title
-			$page['title'] = $page['data']['name'] . ' - door ' ;
+			$page['title'] = $page['data']['name'] ;
 		}
 	} else {
 		// We could not find this door.
