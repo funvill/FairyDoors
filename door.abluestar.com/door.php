@@ -21,23 +21,27 @@ if( $page['act'] == 'add' &&
     isset( $_REQUEST['name'] ) && isset( $_REQUEST['description'] ) &&
     isset( $_REQUEST['longitude'] ) && isset( $_REQUEST['latitude'] ) )
 {
-    // Generate a slug
-    // From http://cubiq.org/the-perfect-php-clean-url-generator
-    setlocale(LC_ALL, 'en_US.UTF8');
-    function toAscii($str, $replace=array(), $delimiter='-') {
-    	if( !empty($replace) ) {
-    		$str = str_replace((array)$replace, ' ', $str);
-    	}
-    	$clean = iconv('UTF-8', 'ASCII//TRANSLIT', $str);
-    	$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', $clean);
-    	$clean = strtolower(trim($clean, '-'));
-    	$clean = preg_replace("/[\/_|+ -]+/", $delimiter, $clean);
-      $clean = strtolower(trim($clean, '-'));
-    	return $clean;
-    }
-		$slug = toAscii( $_REQUEST['name'] ) ;
+    require_once( 'inputvalidation.php' ) ;
+
+
+		if( strlen( $_REQUEST['name'] ) > MAX_SLUG_LENGTH ) {
+			echo "Error: Name is too long";
+			exit();
+		}
+		if( ! isLonLat ( $_REQUEST['latitude'] ) || ! isLonLat ( $_REQUEST['longitude'] ) ) {
+			echo "Error: the latitude, or longitude are invalid" ;
+			echo '<pre>';
+			var_dump( $_REQUEST ) ;
+			echo '</pre>';
+			exit() ;
+		}
+		if( isThereBadWords( $_REQUEST['name'] ) || isThereBadWords( $_REQUEST['description'] ) ) {
+			echo "Error: There are banned words in the name or description. Kids will see this!" ;
+			exit() ;
+		}
 
 		// Remove any scripting from the description or name.
+		$slug = toAscii( $_REQUEST['name'] ) ;
 		$name = strip_tags( $_REQUEST['name'] ) ;
 		$description = strip_tags( $_REQUEST['description'] ) ;
 		$latitude = strip_tags( $_REQUEST['latitude'] ) ;

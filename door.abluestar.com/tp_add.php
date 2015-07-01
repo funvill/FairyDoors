@@ -11,6 +11,7 @@ require_once('settings.php') ;
         <input type='hidden' name='act' value='add' />
         <div class="form-group">
           <label for="name">Name of the door</label>
+          <p class="help-block"><em>The name of the door, Max length: <?php echo MAX_SLUG_LENGTH ; ?></em></p>
           <input type='text' class="form-control" name='name' data-minlength="6" required />
         </div>
 
