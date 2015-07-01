@@ -7,11 +7,13 @@ $db = new MyDoors();
 
 // SEt default for act
 $page['act'] = 'about' ;
+
 // Check to see if there was a act set.
 if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
 	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
+		$page['title'] = $page['act'] ;
 	}
 }
 
@@ -45,7 +47,7 @@ if( $page['act'] == 'add' &&
     $db->Update( $slug, $name, $description, $latitude , $longitude ) ;
 
 		// ToDo: redirect to the door page.
-    echo '<div class="page container"><p class="bg-success">Magic door added</p></div><br />';
+    echo '<div class="page container"><p class="bg-success">Magic door added</p></div>';
 		echo '<a href="?act=view&slug='. $slug .'">'. $name .'</a>' ;
 		exit();
 }
@@ -61,7 +63,7 @@ if( $page['act'] == 'view' ) {
 			$page['act'] = '404' ;
 		} else {
 			// Title
-			$page['title'] = $page['data']['name'] ;
+			$page['title'] = $page['data']['name'] . ' - door ' ;
 		}
 	} else {
 		// We could not find this door.
@@ -72,9 +74,10 @@ if( $page['act'] == 'view' ) {
 // Generate template name
 // This is guaranteed to be an expected value. Checked in header of file.
 $page['template'] = 'tp_' . $page['act'] . '.php' ;
-if( ! file_exists($page['template']) ) {
+if( ! file_exists($page['template'] ) || $page['act'] == '404' ) {
 	// The file can not be found.
 	$page['act'] = '404' ;
+	$page['title'] = $page['act'] ;
 	$page['template'] = 'tp_' . $page['act'] . '.php' ;
 }
 
