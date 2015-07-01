@@ -13,7 +13,7 @@ if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
 	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
-		$page['title'] = ucfirst( $page['act'] ) ; // First letter should be uppercase 
+		$page['title'] = $page['act'] ;
 	}
 }
 
@@ -90,7 +90,7 @@ if( ! file_exists($page['template'] ) || $page['act'] == '404' ) {
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title><?php if( isset( $page['title'] ) ) { echo $page['title'] . ' -' ; } ?> Magic Door</title>
+    <title><?php if( isset( $page['title'] ) ) { echo ucfirst( $page['title'] ) . ' -' ; } ?> Magic Door</title>
     <meta name="description" content="A map of magic doors around the world.">
 
     <!-- Latest compiled and minified CSS -->
