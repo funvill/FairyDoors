@@ -59,7 +59,8 @@ require_once('settings.php') ;
       zoom: 14
     };
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
+    map.setOptions({draggableCursor:'crosshair'});
+    
     // Try HTML5 geolocation
     if(navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function(position) {
