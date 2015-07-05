@@ -13,9 +13,9 @@
   </div>
 
   <div class="row">
-    <div class='col-md-12'>
+    <div class='col-md-12 center-block'>
       <h3>How to make a Fairy/Magic door</h3>
-      <iframe src="https://docs.google.com/presentation/d/1r8SgtGP7OUQRYPDZ20znpjjzukvsw_WP6_skyOxKBn8/embed?start=false&loop=true&delayms=10000" frameborder="1" width="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+      <iframe src="https://docs.google.com/presentation/d/1r8SgtGP7OUQRYPDZ20znpjjzukvsw_WP6_skyOxKBn8/embed?start=false&loop=true&delayms=10000" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
   </div>
 
