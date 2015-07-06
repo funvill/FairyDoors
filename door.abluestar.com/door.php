@@ -11,7 +11,7 @@ $page['act'] = 'about' ;
 // Check to see if there was a act set.
 if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
-	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug', 'instructions') ) ) {
+	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug', 'instructions', 'search') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
 		$page['title'] = $page['act'] ;
 	}

@@ -17,7 +17,7 @@
       </ul>
 
       <!-- search bar -->
-      <form class="navbar-form navbar-right" role="search">
+      <form class="navbar-form navbar-right" role="search" action="?act=search" method="post" >
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search">
         </div>
