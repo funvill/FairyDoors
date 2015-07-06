@@ -19,7 +19,60 @@
     </div>
   </div>
 
+  <div class="row">
+    <div class='col-md-12'>
+      <h3>Door templates</h3>
 
+      <div class="row">
+        <div class='col-md-3' align='center'>
+          <h4>Round door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+        <div class='col-md-3' align='center'>
+          <h4>Square door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+        <div class='col-md-3' align='center'>
+          <h4>XXXX door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+        <div class='col-md-3' align='center'>
+          <h4>YYYY door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class='col-md-3' align='center'>
+          <h4>Round door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+        <div class='col-md-3' align='center'>
+          <h4>Square door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+        <div class='col-md-3' align='center'>
+          <h4>XXXX door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+        <div class='col-md-3' align='center'>
+          <h4>YYYY door</h4>
+          <img src='#' width="200px" height="200px" /><br />
+          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
 
   <div class="row">
     <div class='col-md-12' >
@@ -50,5 +103,15 @@
         <li><a href="https://plus.google.com/111367666747908953608/posts"><i class="fa fa-google-plus"></i></a></li>
       </ul>
     </div>
+
+
+    <!-- Licence -->
+    <div class="row">
+      <div class='col-md-12'>
+        <?php include 'tp_licence.php' ; ?>
+      </div>
+    </div>
+
+
   </div>
 </div>

@@ -23,29 +23,30 @@ if( $page['act'] == 'add' &&
 {
     require_once( 'inputvalidation.php' ) ;
 
+		// Remove any scripting from the description or name.
+		$name = trim( strip_tags( $_REQUEST['name'] ) ) ;
+		$slug = toAscii( $name) ;
+		$description = trim( strip_tags( $_REQUEST['description'] ) ) ;
+		$latitude = strip_tags( $_REQUEST['latitude'] ) ;
+		$longitude = strip_tags( $_REQUEST['longitude'] ) ;
 
-		if( strlen( $_REQUEST['name'] ) > MAX_SLUG_LENGTH ) {
+		// Do valadation on the inputs.
+		if( strlen( $name ) > MAX_SLUG_LENGTH ) {
 			echo "Error: Name is too long";
 			exit();
 		}
-		if( ! isLonLat ( $_REQUEST['latitude'] ) || ! isLonLat ( $_REQUEST['longitude'] ) ) {
-			echo "Error: the latitude, or longitude are invalid" ;
-			echo '<pre>';
-			var_dump( $_REQUEST ) ;
-			echo '</pre>';
+		if( strlen( $name ) <= 4 ) {
+			echo "Error: Name is too short";
+			exit();
+		}
+		if( ! isLonLat ( $latitude ) || ! isLonLat ( $longitude ) ) {
+			echo "Error: The latitude, or longitude are invalid" ;
 			exit() ;
 		}
-		if( isThereBadWords( $_REQUEST['name'] ) || isThereBadWords( $_REQUEST['description'] ) ) {
+		if( isThereBadWords( $name ) || isThereBadWords( $descriptio ) ) {
 			echo "Error: There are banned words in the name or description. Kids will see this!" ;
 			exit() ;
 		}
-
-		// Remove any scripting from the description or name.
-		$slug = toAscii( $_REQUEST['name'] ) ;
-		$name = strip_tags( $_REQUEST['name'] ) ;
-		$description = strip_tags( $_REQUEST['description'] ) ;
-		$latitude = strip_tags( $_REQUEST['latitude'] ) ;
-		$longitude = strip_tags( $_REQUEST['longitude'] ) ;
 
     // Add this door.
     $db->Update( $slug, $name, $description, $latitude , $longitude ) ;
