@@ -85,14 +85,14 @@
   </div>
 
   <div class="row">
-    <div class='col-md-6' >
+    <div class='col-md-8' >
       <h3>About Steven Smethurst</h3>
       <p><img src='img/steven_smethurst.jpeg' width='200px' height='134px' align='left' style='margin: 0 20px 20px 0' /> Steven Smethurst is a <a href='https://www.google.ca/maps/place/Vancouver,+BC/@49.2569332,-123.1239135,12z/data=!4m2!3m1!1s0x548673f143a94fb3:0xbb9196ea9b81f38b'>Vancouver based Maker</a>, Hacker, Coder, and all around great guy! <br />He created this project to bring a little more magic and happiness into this world. </p>
 
       <p>You can find more of his projects at his blog <a href='http://blog.abluestar.com/'>abluestar.com</a></p>
     </div>
 
-    <div class='col-md-6' >
+    <div class='col-md-4' >
       <h3>Contact</h3>
       <p>You can add or contact Steven Smethurst via the following social media sites.</p>
       <ul class="social">

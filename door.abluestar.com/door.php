@@ -51,10 +51,8 @@ if( $page['act'] == 'add' &&
     // Add this door.
     $db->Update( $slug, $name, $description, $latitude , $longitude ) ;
 
-		// ToDo: redirect to the door page.
-    echo '<div class="page container"><p class="bg-success">Magic door added</p></div>';
-		echo '<a href="?act=view&slug='. $slug .'">'. $name .'</a>' ;
-		exit();
+		// Redirect to the door instructions page.
+		$page['act'] == 'instructions' ;
 }
 
 
