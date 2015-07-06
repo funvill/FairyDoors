@@ -11,7 +11,7 @@ $page['act'] = 'about' ;
 // Check to see if there was a act set.
 if( isset($_REQUEST['act'] ) ) {
 	// Check to make sure that its a valid act, else use default
-	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug') ) ) {
+	if( in_array( $_REQUEST['act'], array('about', 'map', 'view', 'add', 'debug', 'instructions') ) ) {
 		$page['act'] = $_REQUEST['act'] ;
 		$page['title'] = $page['act'] ;
 	}
@@ -24,7 +24,7 @@ if( $page['act'] == 'add' &&
     require_once( 'inputvalidation.php' ) ;
 
 		// Remove any scripting from the description or name.
-		$name = trim( strip_tags( $_REQUEST['name'] ) ) ;
+		$name = ucfirst( trim( strip_tags( $_REQUEST['name'] ) ) );
 		$slug = toAscii( $name) ;
 		$description = trim( strip_tags( $_REQUEST['description'] ) ) ;
 		$latitude = strip_tags( $_REQUEST['latitude'] ) ;
@@ -43,7 +43,7 @@ if( $page['act'] == 'add' &&
 			echo "Error: The latitude, or longitude are invalid" ;
 			exit() ;
 		}
-		if( isThereBadWords( $name ) || isThereBadWords( $descriptio ) ) {
+		if( isThereBadWords( $name ) || isThereBadWords( $description ) ) {
 			echo "Error: There are banned words in the name or description. Kids will see this!" ;
 			exit() ;
 		}
@@ -52,7 +52,7 @@ if( $page['act'] == 'add' &&
     $db->Update( $slug, $name, $description, $latitude , $longitude ) ;
 
 		// Redirect to the door instructions page.
-		$page['act'] == 'instructions' ;
+		$page['act'] = 'instructions' ;
 }
 
 
@@ -78,6 +78,8 @@ if( $page['act'] == 'view' ) {
 // This is guaranteed to be an expected value. Checked in header of file.
 $page['template'] = 'tp_' . $page['act'] . '.php' ;
 if( ! file_exists($page['template'] ) || $page['act'] == '404' ) {
+	// echo 'Error: Template not found. template='. $page['template'] ; exit(); // Debug
+
 	// The file can not be found.
 	$page['act'] = '404' ;
 	$page['title'] = $page['act'] ;
