@@ -1,7 +1,7 @@
 <div class='page container'>
   <div class="row">
     <div class='col-md-12'>
-      <h1>Magic doors</h1>
+      <h1>Magic/Fairy doors</h1>
       <p>As we all know, little doors are portals to magical places. They can lean one to <a href='https://en.wikipedia.org/wiki/Gnome'>gnomes</a>, <a href='https://en.wikipedia.org/wiki/Fairy'>fairies</a>, and many other types of <a href='https://en.wikipedia.org/wiki/Magical_creature'>magical creatures</a>!</p>
     </div>
   </div>

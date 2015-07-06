@@ -15,6 +15,17 @@
         <li <?php if( $page['act'] == 'map'     ) { echo 'class="active"' ; } ?> ><a href="?act=map">Map</a></li>
         <li <?php if( $page['act'] == 'add'     ) { echo 'class="active"' ; } ?> ><a href="?act=add">Add</a></li>
       </ul>
+
+      <!-- search bar -->
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+
+
     </div><!--/.nav-collapse -->
   </div>
 </nav>

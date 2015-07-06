@@ -21,13 +21,23 @@ class MyDoors extends SQLite3
   {
     $this->open( SQLITE_DATABASE );
     // Ensure that the database has the correct table.
-    $st=$this->prepare( 'CREATE TABLE IF NOT EXISTS doors (slug STRING PRIMARY KEY, name STRING, body STRING, lon STRING, lng STRING)' );
+    $st=$this->prepare( 'CREATE TABLE IF NOT EXISTS doors ( id INTEGER PRIMARY KEY, slug STRING UNIQUE, name STRING, body STRING, lon STRING, lng STRING);' );
     $st->execute( );
   }
 
   function GetBySlug( $slug ) {
     $st=$this->prepare('SELECT * FROM doors WHERE slug=?');
     $st->bindParam(1, $slug, SQLITE3_TEXT);
+    $result = $st->execute( );
+    if( $result == false ) {
+      return false;
+    }
+    return $result->fetchArray( SQLITE3_ASSOC ) ;
+  }
+
+  function GetByID( $id ) {
+    $st=$this->prepare('SELECT * FROM doors WHERE id=?');
+    $st->bindParam(1, $id, SQLITE3_TEXT);
     $result = $st->execute( );
     if( $result == false ) {
       return false;
