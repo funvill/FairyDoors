@@ -16,3 +16,8 @@
 }
 .social li a { color: #000; }
 .social li a:hover { color: #11ABB0; }
+
+footer {
+  margin-top: 60px 
+  text-align: center;
+}

@@ -104,14 +104,10 @@
       </ul>
     </div>
 
-
-    <!-- Licence -->
-    <div class="row">
-      <div class='col-md-12'>
-        <?php include 'tp_licence.php' ; ?>
-      </div>
-    </div>
-
-
   </div>
 </div>
+
+<footer>
+  <!-- Licence -->
+  <?php include 'tp_licence.php' ; ?>
+</footer>
