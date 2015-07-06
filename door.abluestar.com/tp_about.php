@@ -103,11 +103,12 @@
         <li><a href="https://plus.google.com/111367666747908953608/posts"><i class="fa fa-google-plus"></i></a></li>
       </ul>
     </div>
+  </div>
 
+  <!-- Licence -->
+  <div class="row">
+    <div class='col-md-12' >
+      <?php include 'tp_licence.php' ; ?>
+    </div>
   </div>
 </div>
-
-<footer>
-  <!-- Licence -->
-  <?php include 'tp_licence.php' ; ?>
-</footer>
