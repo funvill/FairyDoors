@@ -7,15 +7,17 @@
   </div>
 
   <div class="row">
-    <div class='col-md-12'>
-      ToDo: More info and example doors.
+    <div class='col-md-12 center-block'>
+      <h3>How to make a Fairy/Magic door</h3>
+      <iframe src="https://docs.google.com/presentation/d/1r8SgtGP7OUQRYPDZ20znpjjzukvsw_WP6_skyOxKBn8/embed?start=false&loop=true&delayms=10000" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
     </div>
   </div>
 
   <div class="row">
-    <div class='col-md-12 center-block'>
-      <h3>How to make a Fairy/Magic door</h3>
-      <iframe src="https://docs.google.com/presentation/d/1r8SgtGP7OUQRYPDZ20znpjjzukvsw_WP6_skyOxKBn8/embed?start=false&loop=true&delayms=10000" frameborder="1" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <div class='col-md-12'>
+      <h3>Example Magic/Fairy doors</h3>
+      Tag your instagram phots with <a href='https://instagram.com/explore/tags/fairydoor/'>#fairydoor</a><br />
+      <!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/c58f37bfec17525041a8a0d0d57f8730472ff633.html" id="instansive_c58f37bfec" name="instansive_c58f37bfec"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
     </div>
   </div>
 
@@ -25,35 +27,34 @@
       <p>All the door templates can be downloaded from the <A href='https://github.com/funvill/FairyDoors/tree/master/laserfiles'>github project folder</a>.</p>
 
       <div class="row">
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>Arch door</h4>
           <img src='img/arch.jpg' width="200px" height="200px" />
         </div>
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>Barrel Door</h4>
           <img src='img/barrel.jpg' width="200px" height="200px" />
         </div>
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>Brick Outline Door</h4>
           <img src='img/brickOutline.jpg' width="200px" height="200px" />
         </div>
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>Curve Left door</h4>
           <img src='img/curveLeft.jpg' width="200px" height="200px" />
         </div>
       </div>
 
-
       <div class="row">
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>Fancy door</h4>
           <img src='img/fancy1.jpg' width="200px" height="200px" />
         </div>
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>flintstones Door</h4>
           <img src='img/flintstones.jpg' width="200px" height="200px" />
         </div>
-        <div class='col-md-3' align='center'>
+        <div class='col-sm-3' align='center'>
           <h4>Hobbit Door</h4>
           <img src='img/hobbet.jpg' width="200px" height="200px" />
         </div>
@@ -62,8 +63,6 @@
           <img src='img/triangle.jpg' width="200px" height="200px" />
         </div>
       </div>
-
-
 
     </div>
   </div>
