@@ -5,7 +5,7 @@ require_once('settings.php') ;
   <div class="row">
     <div class='col-md-6'>
       <h3>Add a new Magic door</h3>
-      <p>You can add a new door here. blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab blab </p>
+      <p>You can add a new door to the map from thsi forum.</p>
 
       <form action="?" method="post" >
         <input type='hidden' name='act' value='add' />
@@ -41,7 +41,7 @@ require_once('settings.php') ;
 
     <div class='col-md-6'>
       <h3>Location of the door</h3>
-      <p>Click the map to add a marker for the doors location. Click the map again to move the maker</p>
+      <p>Click the map to add a marker for the doors location. Click the map again to move the maker around the map.</p>
       <div id='map-canvas'></div>
     </div>
   </div>
