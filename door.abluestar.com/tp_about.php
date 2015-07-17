@@ -27,19 +27,19 @@
       <div class="row">
         <div class='col-md-3' align='center'>
           <h4>Arch door</h4>
-          <img src='img/arch.jpg'  />
+          <img src='img/arch.jpg' width="200px" height="200px" />
         </div>
         <div class='col-md-3' align='center'>
           <h4>Barrel Door</h4>
-          <img src='img/barrel.jpg'  />
+          <img src='img/barrel.jpg' width="200px" height="200px" />
         </div>
         <div class='col-md-3' align='center'>
           <h4>Brick Outline Door</h4>
-          <img src='img/brickOutline.jpg'  />
+          <img src='img/brickOutline.jpg' width="200px" height="200px" />
         </div>
         <div class='col-md-3' align='center'>
           <h4>Curve Left door</h4>
-          <img src='img/curveLeft.jpg'  />
+          <img src='img/curveLeft.jpg' width="200px" height="200px" />
         </div>
       </div>
 
@@ -47,19 +47,19 @@
       <div class="row">
         <div class='col-md-3' align='center'>
           <h4>Fancy door</h4>
-          <img src='img/fancy1.jpg'  />
+          <img src='img/fancy1.jpg' width="200px" height="200px" />
         </div>
         <div class='col-md-3' align='center'>
           <h4>flintstones Door</h4>
-          <img src='img/flintstones.jpg'  />
+          <img src='img/flintstones.jpg' width="200px" height="200px" />
         </div>
         <div class='col-md-3' align='center'>
           <h4>Hobbit Door</h4>
-          <img src='img/hobbet.jpg'  />
+          <img src='img/hobbet.jpg' width="200px" height="200px" />
         </div>
         <div class='col-md-3' align='center'>
           <h4>Triangle door</h4>
-          <img src='img/triangle.jpg'  />
+          <img src='img/triangle.jpg' width="200px" height="200px" />
         </div>
       </div>
 
