@@ -22,50 +22,44 @@
   <div class="row">
     <div class='col-md-12'>
       <h3>Door templates</h3>
+      <p>All the door templates can be downloaded from the <A href='https://github.com/funvill/FairyDoors/tree/master/laserfiles'>github project folder</a>.</p>
 
       <div class="row">
         <div class='col-md-3' align='center'>
-          <h4>Round door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Arch door</h4>
+          <img src='img/arch.jpg'  />
         </div>
         <div class='col-md-3' align='center'>
-          <h4>Square door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Barrel Door</h4>
+          <img src='img/barrel.jpg'  />
         </div>
         <div class='col-md-3' align='center'>
-          <h4>XXXX door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Brick Outline Door</h4>
+          <img src='img/brickOutline.jpg'  />
         </div>
         <div class='col-md-3' align='center'>
-          <h4>YYYY door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Curve Left door</h4>
+          <img src='img/curveLeft.jpg'  />
         </div>
       </div>
 
+
       <div class="row">
         <div class='col-md-3' align='center'>
-          <h4>Round door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Fancy door</h4>
+          <img src='img/fancy1.jpg'  />
         </div>
         <div class='col-md-3' align='center'>
-          <h4>Square door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>flintstones Door</h4>
+          <img src='img/flintstones.jpg'  />
         </div>
         <div class='col-md-3' align='center'>
-          <h4>XXXX door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Hobbit Door</h4>
+          <img src='img/hobbet.jpg'  />
         </div>
         <div class='col-md-3' align='center'>
-          <h4>YYYY door</h4>
-          <img src='#' width="200px" height="200px" /><br />
-          <a href='#'>PDF</a> | <a href='#'>SVG</a>
+          <h4>Triangle door</h4>
+          <img src='img/triangle.jpg'  />
         </div>
       </div>
 
