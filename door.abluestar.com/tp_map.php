@@ -44,7 +44,7 @@
           title: door[0]
       });
 
-      var content     = "<a href='door.php?act=view&slug=" + door[3] + "'><strong>" + door[0] + "</strong></a>" ;
+      var content     = "<a href='?act=view&slug=" + door[3] + "'><strong>" + door[0] + "</strong></a>" ;
       var infowindow  = new google.maps.InfoWindow() ;
 
       google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
